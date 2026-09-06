@@ -1,0 +1,40 @@
+# Clinical Center for Speech & Psychology — Rawalpindi
+
+> Clinical Center for Speech & Psychology (CCSP) is a licensed speech-language pathology and psychological services clinic located at ADYALA, Defence Road, Rawalpindi 46200, Pakistan. It serves families across Rawalpindi, Islamabad, Askari 1–14, DHA, Bahria Town, and the Khawaja Corporation / Adyala Road corridor. The clinic has been operating since 2014, has helped 500+ patients, and is open Monday–Saturday, 9am–5pm. Phone: 0331-880-7617.
+
+CCSP provides two primary service categories:
+- **Pediatric Speech & Language Therapy** — for children with speech delays, Autism, ADHD, stuttering, feeding difficulties, and AAC needs.
+- **Adult Neuro-Rehabilitation** — for adults with post-stroke aphasia, dysarthria, apraxia, dysphagia, voice disorders, and neurodegenerative conditions (Parkinson's, Dementia, ALS).
+
+The clinic is one of the few in the twin cities offering LSVT LOUD (Parkinson's voice treatment) and evidence-based AAC (Augmentative & Alternative Communication) assessment.
+
+## Core Pages
+
+- [Home](https://ccsp.pk/): Overview of the clinic, services, trust signals, and appointment booking.
+- [About Us](https://ccsp.pk/about): Clinic background, founding year (2014), philosophy, and team overview.
+- [Contact & Visit](https://ccsp.pk/contact): Address (ADYALA, Defence Road, Rawalpindi), phone (0331-880-7617), hours (Mon–Sat 9am–5pm), and Google Maps directions.
+
+## Pediatric Services
+
+- [Pediatric Services Overview](https://ccsp.pk/pediatric-services): All pediatric therapy services for children and adolescents.
+- [Speech Sound & Articulation Therapy](https://ccsp.pk/pediatric-services/speech-articulation): Targeted intervention for phonological delays and articulation errors in children.
+- [Language Intervention (Receptive & Expressive)](https://ccsp.pk/pediatric-services/language-intervention): Building vocabulary, comprehension, and sentence structure for children with language delays or disorders.
+- [Fluency Shaping (Stuttering / Cluttering)](https://ccsp.pk/pediatric-services/fluency-shaping): Evidence-based fluency therapy for children and teenagers who stutter or clutter.
+- [Social Communication & Play Therapy](https://ccsp.pk/pediatric-services/social-communication): Pragmatic language and social skills for children with Autism Spectrum Disorder, ADHD, and Social Communication Disorder.
+- [Pediatric Feeding & Orofacial Myofunctional Therapy](https://ccsp.pk/pediatric-services/feeding-therapy): Support for feeding difficulties, extreme picky eating, oral-motor disorders, tongue posture, and pediatric dysphagia.
+- [AAC Therapy (Augmentative & Alternative Communication)](https://ccsp.pk/pediatric-services/aac-therapy): PECS, speech generating devices (SGDs), and total communication for non-speaking or minimally verbal children.
+
+## Adult Rehabilitation Services
+
+- [Adult Services Overview](https://ccsp.pk/adult-services): All adult neuro-rehabilitation and voice services.
+- [Aphasia & Cognitive-Communication Therapy](https://ccsp.pk/adult-services/aphasia-therapy): Language rehabilitation after stroke and traumatic brain injury.
+- [Motor Speech Therapy (Dysarthria & Apraxia)](https://ccsp.pk/adult-services/motor-speech): Improving speech intelligibility and motor planning after neurological injury. LSVT LOUD available.
+- [Dysphagia (Swallowing Rehabilitation)](https://ccsp.pk/adult-services/dysphagia-therapy): Clinical swallowing assessment and therapy for stroke, Parkinson's, and neurological conditions.
+- [Clinical Voice & Resonance Therapy](https://ccsp.pk/adult-services/voice-therapy): Voice rehabilitation for hoarseness, vocal nodules, and professional voice users (teachers, lecturers, imams).
+- [Neurodegenerative Communication Management](https://ccsp.pk/adult-services/neurodegenerative): Long-term communication and swallowing support for Parkinson's disease, Dementia, Alzheimer's, and ALS. LSVT LOUD offered.
+
+## Optional
+
+- [XML Sitemap](https://ccsp.pk/sitemap.xml): Machine-readable sitemap of all pages for search engine indexing.
+- [HTML Sitemap](https://ccsp.pk/sitemap): Human-readable sitemap listing all pages.
+- [Entity Map (JSON-LD)](https://ccsp.pk/entity-map.json): Structured entity data describing the clinic, services, location, and relationships for AI and semantic search systems.

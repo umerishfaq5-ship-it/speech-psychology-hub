@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-const BASE_URL = "";
+const BASE_URL = "https://clinicalcenter.pk";
+const TODAY = new Date().toISOString().split("T")[0];
 
 interface SitemapEntry { path: string; changefreq?: string; priority?: string }
 

@@ -1,0 +1,144 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://ccsp.pk/#organization",
+      "name": "Clinical Center for Speech & Psychology",
+      "alternateName": ["CCSP", "CCSP Rawalpindi", "Clinical Centre for Speech and Psychology"],
+      "description": "Licensed speech-language pathology and psychological services clinic in Rawalpindi, Pakistan. Providing evidence-based pediatric and adult communication therapy since 2014.",
+      "url": "https://ccsp.pk",
+      "logo": "https://ccsp.pk/favicon.png",
+      "telephone": "+923318807617",
+      "foundingDate": "2014",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "value": 12 },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ADYALA, Defence Road",
+        "addressLocality": "Rawalpindi",
+        "addressRegion": "Punjab",
+        "postalCode": "46200",
+        "addressCountry": "PK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.558426,
+        "longitude": 73.061949
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Rawalpindi" },
+        { "@type": "City", "name": "Islamabad" },
+        { "@type": "AdministrativeArea", "name": "Askari Housing Scheme, Rawalpindi" },
+        { "@type": "AdministrativeArea", "name": "DHA Rawalpindi" },
+        { "@type": "AdministrativeArea", "name": "Bahria Town Rawalpindi" },
+        { "@type": "AdministrativeArea", "name": "Gulshan Abad, Rawalpindi" },
+        { "@type": "AdministrativeArea", "name": "Khawaja Corporation, Adyala Road, Rawalpindi" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Speech Therapy & Psychology Services",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Pediatric Speech & Language Therapy",
+            "itemListElement": [
+              { "@type": "MedicalTherapy", "name": "Speech Sound & Articulation Therapy", "url": "https://ccsp.pk/pediatric-services/speech-articulation", "relevantSpecialty": "Speech-Language Pathology" },
+              { "@type": "MedicalTherapy", "name": "Language Intervention (Receptive & Expressive)", "url": "https://ccsp.pk/pediatric-services/language-intervention", "relevantSpecialty": "Speech-Language Pathology" },
+              { "@type": "MedicalTherapy", "name": "Fluency Shaping (Stuttering & Cluttering)", "url": "https://ccsp.pk/pediatric-services/fluency-shaping", "relevantSpecialty": "Speech-Language Pathology" },
+              { "@type": "MedicalTherapy", "name": "Social Communication & Play Therapy", "url": "https://ccsp.pk/pediatric-services/social-communication", "relevantSpecialty": "Speech-Language Pathology" },
+              { "@type": "MedicalTherapy", "name": "Pediatric Feeding & Orofacial Myofunctional Therapy", "url": "https://ccsp.pk/pediatric-services/feeding-therapy", "relevantSpecialty": "Speech-Language Pathology" },
+              { "@type": "MedicalTherapy", "name": "AAC Therapy (Augmentative & Alternative Communication)", "url": "https://ccsp.pk/pediatric-services/aac-therapy", "relevantSpecialty": "Speech-Language Pathology" }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Adult Neuro-Rehabilitation Services",
+            "itemListElement": [
+              { "@type": "MedicalTherapy", "name": "Aphasia & Cognitive-Communication Therapy", "url": "https://ccsp.pk/adult-services/aphasia-therapy", "relevantSpecialty": "Speech-Language Pathology" },
+              { "@type": "MedicalTherapy", "name": "Motor Speech Therapy (Dysarthria & Apraxia)", "url": "https://ccsp.pk/adult-services/motor-speech", "relevantSpecialty": "Speech-Language Pathology" },
+              { "@type": "MedicalTherapy", "name": "Dysphagia (Swallowing Rehabilitation)", "url": "https://ccsp.pk/adult-services/dysphagia-therapy", "relevantSpecialty": "Speech-Language Pathology" },
+              { "@type": "MedicalTherapy", "name": "Clinical Voice & Resonance Therapy", "url": "https://ccsp.pk/adult-services/voice-therapy", "relevantSpecialty": "Speech-Language Pathology" },
+              { "@type": "MedicalTherapy", "name": "Neurodegenerative Communication Management (LSVT LOUD)", "url": "https://ccsp.pk/adult-services/neurodegenerative", "relevantSpecialty": "Speech-Language Pathology" }
+            ]
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.facebook.com/CCSPRawalpindi",
+        "https://g.co/kgs/CCSPRawalpindi"
+      ],
+      "knowsAbout": [
+        "Speech-Language Pathology", "Articulation Disorders", "Phonological Disorders",
+        "Language Delay", "Autism Spectrum Disorder", "ADHD", "Stuttering", "Fluency Disorders",
+        "Feeding Therapy", "Orofacial Myofunctional Therapy", "AAC",
+        "Aphasia", "Dysarthria", "Apraxia of Speech", "Dysphagia",
+        "Voice Disorders", "Vocal Nodules", "Parkinson's Disease Speech",
+        "LSVT LOUD", "Dementia Communication", "Alzheimer's Disease"
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "name": "Free Initial Consultation", "description": "15-minute consultation via WhatsApp or phone to discuss your child's needs before booking a full assessment." }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://ccsp.pk/#localbusiness",
+      "name": "Clinical Center for Speech & Psychology",
+      "image": "https://ccsp.pk/favicon.png",
+      "priceRange": "PKR",
+      "currenciesAccepted": "PKR",
+      "paymentAccepted": "Cash, Bank Transfer",
+      "telephone": "+923318807617",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ADYALA, Defence Road, near Khawaja Corporation Chowk",
+        "addressLocality": "Rawalpindi",
+        "addressRegion": "Punjab",
+        "postalCode": "46200",
+        "addressCountry": "PK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.558426,
+        "longitude": 73.061949
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "87",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "nearbyLocation": [
+        "Askari 1, Rawalpindi",
+        "Askari 2, Rawalpindi",
+        "Askari 3, Rawalpindi",
+        "Askari 10, Rawalpindi",
+        "Askari 14, Rawalpindi",
+        "DHA Phase 1 Rawalpindi",
+        "DHA Phase 2 Rawalpindi",
+        "Bahria Town Rawalpindi",
+        "Gulshan Abad Rawalpindi",
+        "Khawaja Corporation Chowk",
+        "Adyala Road Rawalpindi"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ccsp.pk/#website",
+      "name": "Clinical Center for Speech & Psychology",
+      "url": "https://ccsp.pk",
+      "description": "Official website of CCSP — Rawalpindi's speech therapy and psychology clinic serving Askari, DHA, Bahria Town, and Islamabad.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://ccsp.pk/#organization" },
+      "about": { "@id": "https://ccsp.pk/#organization" }
+    }
+  ]
+}

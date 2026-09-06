@@ -10,15 +10,32 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as PediatricServicesRouteImport } from './routes/pediatric-services'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AdultServicesRouteImport } from './routes/adult-services'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PediatricServicesSpeechArticulationRouteImport } from './routes/pediatric-services.speech-articulation'
+import { Route as PediatricServicesSocialCommunicationRouteImport } from './routes/pediatric-services.social-communication'
+import { Route as PediatricServicesLanguageInterventionRouteImport } from './routes/pediatric-services.language-intervention'
+import { Route as PediatricServicesFluencyShapingRouteImport } from './routes/pediatric-services.fluency-shaping'
+import { Route as PediatricServicesFeedingTherapyRouteImport } from './routes/pediatric-services.feeding-therapy'
+import { Route as PediatricServicesAacTherapyRouteImport } from './routes/pediatric-services.aac-therapy'
+import { Route as AdultServicesVoiceTherapyRouteImport } from './routes/adult-services.voice-therapy'
+import { Route as AdultServicesNeurodegenerativeRouteImport } from './routes/adult-services.neurodegenerative'
+import { Route as AdultServicesMotorSpeechRouteImport } from './routes/adult-services.motor-speech'
+import { Route as AdultServicesDysphagiaTherapyRouteImport } from './routes/adult-services.dysphagia-therapy'
+import { Route as AdultServicesAphasiaTherapyRouteImport } from './routes/adult-services.aphasia-therapy'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PediatricServicesRoute = PediatricServicesRouteImport.update({
@@ -46,31 +63,133 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PediatricServicesSpeechArticulationRoute =
+  PediatricServicesSpeechArticulationRouteImport.update({
+    id: '/speech-articulation',
+    path: '/speech-articulation',
+    getParentRoute: () => PediatricServicesRoute,
+  } as any)
+const PediatricServicesSocialCommunicationRoute =
+  PediatricServicesSocialCommunicationRouteImport.update({
+    id: '/social-communication',
+    path: '/social-communication',
+    getParentRoute: () => PediatricServicesRoute,
+  } as any)
+const PediatricServicesLanguageInterventionRoute =
+  PediatricServicesLanguageInterventionRouteImport.update({
+    id: '/language-intervention',
+    path: '/language-intervention',
+    getParentRoute: () => PediatricServicesRoute,
+  } as any)
+const PediatricServicesFluencyShapingRoute =
+  PediatricServicesFluencyShapingRouteImport.update({
+    id: '/fluency-shaping',
+    path: '/fluency-shaping',
+    getParentRoute: () => PediatricServicesRoute,
+  } as any)
+const PediatricServicesFeedingTherapyRoute =
+  PediatricServicesFeedingTherapyRouteImport.update({
+    id: '/feeding-therapy',
+    path: '/feeding-therapy',
+    getParentRoute: () => PediatricServicesRoute,
+  } as any)
+const PediatricServicesAacTherapyRoute =
+  PediatricServicesAacTherapyRouteImport.update({
+    id: '/aac-therapy',
+    path: '/aac-therapy',
+    getParentRoute: () => PediatricServicesRoute,
+  } as any)
+const AdultServicesVoiceTherapyRoute =
+  AdultServicesVoiceTherapyRouteImport.update({
+    id: '/voice-therapy',
+    path: '/voice-therapy',
+    getParentRoute: () => AdultServicesRoute,
+  } as any)
+const AdultServicesNeurodegenerativeRoute =
+  AdultServicesNeurodegenerativeRouteImport.update({
+    id: '/neurodegenerative',
+    path: '/neurodegenerative',
+    getParentRoute: () => AdultServicesRoute,
+  } as any)
+const AdultServicesMotorSpeechRoute =
+  AdultServicesMotorSpeechRouteImport.update({
+    id: '/motor-speech',
+    path: '/motor-speech',
+    getParentRoute: () => AdultServicesRoute,
+  } as any)
+const AdultServicesDysphagiaTherapyRoute =
+  AdultServicesDysphagiaTherapyRouteImport.update({
+    id: '/dysphagia-therapy',
+    path: '/dysphagia-therapy',
+    getParentRoute: () => AdultServicesRoute,
+  } as any)
+const AdultServicesAphasiaTherapyRoute =
+  AdultServicesAphasiaTherapyRouteImport.update({
+    id: '/aphasia-therapy',
+    path: '/aphasia-therapy',
+    getParentRoute: () => AdultServicesRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/adult-services': typeof AdultServicesRoute
+  '/adult-services': typeof AdultServicesRouteWithChildren
   '/contact': typeof ContactRoute
-  '/pediatric-services': typeof PediatricServicesRoute
+  '/pediatric-services': typeof PediatricServicesRouteWithChildren
+  '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/adult-services/aphasia-therapy': typeof AdultServicesAphasiaTherapyRoute
+  '/adult-services/dysphagia-therapy': typeof AdultServicesDysphagiaTherapyRoute
+  '/adult-services/motor-speech': typeof AdultServicesMotorSpeechRoute
+  '/adult-services/neurodegenerative': typeof AdultServicesNeurodegenerativeRoute
+  '/adult-services/voice-therapy': typeof AdultServicesVoiceTherapyRoute
+  '/pediatric-services/aac-therapy': typeof PediatricServicesAacTherapyRoute
+  '/pediatric-services/feeding-therapy': typeof PediatricServicesFeedingTherapyRoute
+  '/pediatric-services/fluency-shaping': typeof PediatricServicesFluencyShapingRoute
+  '/pediatric-services/language-intervention': typeof PediatricServicesLanguageInterventionRoute
+  '/pediatric-services/social-communication': typeof PediatricServicesSocialCommunicationRoute
+  '/pediatric-services/speech-articulation': typeof PediatricServicesSpeechArticulationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/adult-services': typeof AdultServicesRoute
+  '/adult-services': typeof AdultServicesRouteWithChildren
   '/contact': typeof ContactRoute
-  '/pediatric-services': typeof PediatricServicesRoute
+  '/pediatric-services': typeof PediatricServicesRouteWithChildren
+  '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/adult-services/aphasia-therapy': typeof AdultServicesAphasiaTherapyRoute
+  '/adult-services/dysphagia-therapy': typeof AdultServicesDysphagiaTherapyRoute
+  '/adult-services/motor-speech': typeof AdultServicesMotorSpeechRoute
+  '/adult-services/neurodegenerative': typeof AdultServicesNeurodegenerativeRoute
+  '/adult-services/voice-therapy': typeof AdultServicesVoiceTherapyRoute
+  '/pediatric-services/aac-therapy': typeof PediatricServicesAacTherapyRoute
+  '/pediatric-services/feeding-therapy': typeof PediatricServicesFeedingTherapyRoute
+  '/pediatric-services/fluency-shaping': typeof PediatricServicesFluencyShapingRoute
+  '/pediatric-services/language-intervention': typeof PediatricServicesLanguageInterventionRoute
+  '/pediatric-services/social-communication': typeof PediatricServicesSocialCommunicationRoute
+  '/pediatric-services/speech-articulation': typeof PediatricServicesSpeechArticulationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/adult-services': typeof AdultServicesRoute
+  '/adult-services': typeof AdultServicesRouteWithChildren
   '/contact': typeof ContactRoute
-  '/pediatric-services': typeof PediatricServicesRoute
+  '/pediatric-services': typeof PediatricServicesRouteWithChildren
+  '/sitemap': typeof SitemapRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/adult-services/aphasia-therapy': typeof AdultServicesAphasiaTherapyRoute
+  '/adult-services/dysphagia-therapy': typeof AdultServicesDysphagiaTherapyRoute
+  '/adult-services/motor-speech': typeof AdultServicesMotorSpeechRoute
+  '/adult-services/neurodegenerative': typeof AdultServicesNeurodegenerativeRoute
+  '/adult-services/voice-therapy': typeof AdultServicesVoiceTherapyRoute
+  '/pediatric-services/aac-therapy': typeof PediatricServicesAacTherapyRoute
+  '/pediatric-services/feeding-therapy': typeof PediatricServicesFeedingTherapyRoute
+  '/pediatric-services/fluency-shaping': typeof PediatricServicesFluencyShapingRoute
+  '/pediatric-services/language-intervention': typeof PediatricServicesLanguageInterventionRoute
+  '/pediatric-services/social-communication': typeof PediatricServicesSocialCommunicationRoute
+  '/pediatric-services/speech-articulation': typeof PediatricServicesSpeechArticulationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -80,7 +199,19 @@ export interface FileRouteTypes {
     | '/adult-services'
     | '/contact'
     | '/pediatric-services'
+    | '/sitemap'
     | '/sitemap.xml'
+    | '/adult-services/aphasia-therapy'
+    | '/adult-services/dysphagia-therapy'
+    | '/adult-services/motor-speech'
+    | '/adult-services/neurodegenerative'
+    | '/adult-services/voice-therapy'
+    | '/pediatric-services/aac-therapy'
+    | '/pediatric-services/feeding-therapy'
+    | '/pediatric-services/fluency-shaping'
+    | '/pediatric-services/language-intervention'
+    | '/pediatric-services/social-communication'
+    | '/pediatric-services/speech-articulation'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -88,7 +219,19 @@ export interface FileRouteTypes {
     | '/adult-services'
     | '/contact'
     | '/pediatric-services'
+    | '/sitemap'
     | '/sitemap.xml'
+    | '/adult-services/aphasia-therapy'
+    | '/adult-services/dysphagia-therapy'
+    | '/adult-services/motor-speech'
+    | '/adult-services/neurodegenerative'
+    | '/adult-services/voice-therapy'
+    | '/pediatric-services/aac-therapy'
+    | '/pediatric-services/feeding-therapy'
+    | '/pediatric-services/fluency-shaping'
+    | '/pediatric-services/language-intervention'
+    | '/pediatric-services/social-communication'
+    | '/pediatric-services/speech-articulation'
   id:
     | '__root__'
     | '/'
@@ -96,15 +239,28 @@ export interface FileRouteTypes {
     | '/adult-services'
     | '/contact'
     | '/pediatric-services'
+    | '/sitemap'
     | '/sitemap.xml'
+    | '/adult-services/aphasia-therapy'
+    | '/adult-services/dysphagia-therapy'
+    | '/adult-services/motor-speech'
+    | '/adult-services/neurodegenerative'
+    | '/adult-services/voice-therapy'
+    | '/pediatric-services/aac-therapy'
+    | '/pediatric-services/feeding-therapy'
+    | '/pediatric-services/fluency-shaping'
+    | '/pediatric-services/language-intervention'
+    | '/pediatric-services/social-communication'
+    | '/pediatric-services/speech-articulation'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  AdultServicesRoute: typeof AdultServicesRoute
+  AdultServicesRoute: typeof AdultServicesRouteWithChildren
   ContactRoute: typeof ContactRoute
-  PediatricServicesRoute: typeof PediatricServicesRoute
+  PediatricServicesRoute: typeof PediatricServicesRouteWithChildren
+  SitemapRoute: typeof SitemapRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -115,6 +271,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pediatric-services': {
@@ -152,17 +315,149 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pediatric-services/speech-articulation': {
+      id: '/pediatric-services/speech-articulation'
+      path: '/speech-articulation'
+      fullPath: '/pediatric-services/speech-articulation'
+      preLoaderRoute: typeof PediatricServicesSpeechArticulationRouteImport
+      parentRoute: typeof PediatricServicesRoute
+    }
+    '/pediatric-services/social-communication': {
+      id: '/pediatric-services/social-communication'
+      path: '/social-communication'
+      fullPath: '/pediatric-services/social-communication'
+      preLoaderRoute: typeof PediatricServicesSocialCommunicationRouteImport
+      parentRoute: typeof PediatricServicesRoute
+    }
+    '/pediatric-services/language-intervention': {
+      id: '/pediatric-services/language-intervention'
+      path: '/language-intervention'
+      fullPath: '/pediatric-services/language-intervention'
+      preLoaderRoute: typeof PediatricServicesLanguageInterventionRouteImport
+      parentRoute: typeof PediatricServicesRoute
+    }
+    '/pediatric-services/fluency-shaping': {
+      id: '/pediatric-services/fluency-shaping'
+      path: '/fluency-shaping'
+      fullPath: '/pediatric-services/fluency-shaping'
+      preLoaderRoute: typeof PediatricServicesFluencyShapingRouteImport
+      parentRoute: typeof PediatricServicesRoute
+    }
+    '/pediatric-services/feeding-therapy': {
+      id: '/pediatric-services/feeding-therapy'
+      path: '/feeding-therapy'
+      fullPath: '/pediatric-services/feeding-therapy'
+      preLoaderRoute: typeof PediatricServicesFeedingTherapyRouteImport
+      parentRoute: typeof PediatricServicesRoute
+    }
+    '/pediatric-services/aac-therapy': {
+      id: '/pediatric-services/aac-therapy'
+      path: '/aac-therapy'
+      fullPath: '/pediatric-services/aac-therapy'
+      preLoaderRoute: typeof PediatricServicesAacTherapyRouteImport
+      parentRoute: typeof PediatricServicesRoute
+    }
+    '/adult-services/voice-therapy': {
+      id: '/adult-services/voice-therapy'
+      path: '/voice-therapy'
+      fullPath: '/adult-services/voice-therapy'
+      preLoaderRoute: typeof AdultServicesVoiceTherapyRouteImport
+      parentRoute: typeof AdultServicesRoute
+    }
+    '/adult-services/neurodegenerative': {
+      id: '/adult-services/neurodegenerative'
+      path: '/neurodegenerative'
+      fullPath: '/adult-services/neurodegenerative'
+      preLoaderRoute: typeof AdultServicesNeurodegenerativeRouteImport
+      parentRoute: typeof AdultServicesRoute
+    }
+    '/adult-services/motor-speech': {
+      id: '/adult-services/motor-speech'
+      path: '/motor-speech'
+      fullPath: '/adult-services/motor-speech'
+      preLoaderRoute: typeof AdultServicesMotorSpeechRouteImport
+      parentRoute: typeof AdultServicesRoute
+    }
+    '/adult-services/dysphagia-therapy': {
+      id: '/adult-services/dysphagia-therapy'
+      path: '/dysphagia-therapy'
+      fullPath: '/adult-services/dysphagia-therapy'
+      preLoaderRoute: typeof AdultServicesDysphagiaTherapyRouteImport
+      parentRoute: typeof AdultServicesRoute
+    }
+    '/adult-services/aphasia-therapy': {
+      id: '/adult-services/aphasia-therapy'
+      path: '/aphasia-therapy'
+      fullPath: '/adult-services/aphasia-therapy'
+      preLoaderRoute: typeof AdultServicesAphasiaTherapyRouteImport
+      parentRoute: typeof AdultServicesRoute
+    }
   }
 }
+
+interface AdultServicesRouteChildren {
+  AdultServicesAphasiaTherapyRoute: typeof AdultServicesAphasiaTherapyRoute
+  AdultServicesDysphagiaTherapyRoute: typeof AdultServicesDysphagiaTherapyRoute
+  AdultServicesMotorSpeechRoute: typeof AdultServicesMotorSpeechRoute
+  AdultServicesNeurodegenerativeRoute: typeof AdultServicesNeurodegenerativeRoute
+  AdultServicesVoiceTherapyRoute: typeof AdultServicesVoiceTherapyRoute
+}
+
+const AdultServicesRouteChildren: AdultServicesRouteChildren = {
+  AdultServicesAphasiaTherapyRoute: AdultServicesAphasiaTherapyRoute,
+  AdultServicesDysphagiaTherapyRoute: AdultServicesDysphagiaTherapyRoute,
+  AdultServicesMotorSpeechRoute: AdultServicesMotorSpeechRoute,
+  AdultServicesNeurodegenerativeRoute: AdultServicesNeurodegenerativeRoute,
+  AdultServicesVoiceTherapyRoute: AdultServicesVoiceTherapyRoute,
+}
+
+const AdultServicesRouteWithChildren = AdultServicesRoute._addFileChildren(
+  AdultServicesRouteChildren,
+)
+
+interface PediatricServicesRouteChildren {
+  PediatricServicesAacTherapyRoute: typeof PediatricServicesAacTherapyRoute
+  PediatricServicesFeedingTherapyRoute: typeof PediatricServicesFeedingTherapyRoute
+  PediatricServicesFluencyShapingRoute: typeof PediatricServicesFluencyShapingRoute
+  PediatricServicesLanguageInterventionRoute: typeof PediatricServicesLanguageInterventionRoute
+  PediatricServicesSocialCommunicationRoute: typeof PediatricServicesSocialCommunicationRoute
+  PediatricServicesSpeechArticulationRoute: typeof PediatricServicesSpeechArticulationRoute
+}
+
+const PediatricServicesRouteChildren: PediatricServicesRouteChildren = {
+  PediatricServicesAacTherapyRoute: PediatricServicesAacTherapyRoute,
+  PediatricServicesFeedingTherapyRoute: PediatricServicesFeedingTherapyRoute,
+  PediatricServicesFluencyShapingRoute: PediatricServicesFluencyShapingRoute,
+  PediatricServicesLanguageInterventionRoute:
+    PediatricServicesLanguageInterventionRoute,
+  PediatricServicesSocialCommunicationRoute:
+    PediatricServicesSocialCommunicationRoute,
+  PediatricServicesSpeechArticulationRoute:
+    PediatricServicesSpeechArticulationRoute,
+}
+
+const PediatricServicesRouteWithChildren =
+  PediatricServicesRoute._addFileChildren(PediatricServicesRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  AdultServicesRoute: AdultServicesRoute,
+  AdultServicesRoute: AdultServicesRouteWithChildren,
   ContactRoute: ContactRoute,
-  PediatricServicesRoute: PediatricServicesRoute,
+  PediatricServicesRoute: PediatricServicesRouteWithChildren,
+  SitemapRoute: SitemapRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

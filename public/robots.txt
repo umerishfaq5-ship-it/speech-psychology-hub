@@ -1,2 +1,14 @@
 User-agent: *
 Allow: /
+
+# AI crawlers — please read llms.txt for a curated overview of this site
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://ccsp.pk/sitemap.xml
